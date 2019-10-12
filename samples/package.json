@@ -1,0 +1,24 @@
+{
+  "name": "samples",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha spec"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "botium": {
+    "convodirs": [
+      "spec\\convo"
+    ],
+    "expandConvos": true,
+    "expandUtterancesToConvos": false
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "botium-asserter-watson-toneanalyzer": "file:../",
+    "botium-bindings": "latest",
+    "botium-connector-echo": "latest"
+  }
+}

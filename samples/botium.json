@@ -1,0 +1,19 @@
+{
+  "botium": {
+    "Capabilities": {
+      "PROJECTNAME": "Echo Sample",
+      "CONTAINERMODE": "echo",
+      "ASSERTERS": [
+        {
+          "ref": "TONE",
+          "src": "botium-asserter-watson-toneanalyzer",
+          "global": true,
+          "args": {
+            "WATSON_URL": "...",
+            "WATSON_APIKEY": "..."
+          }          
+        }
+      ]
+    }
+  }
+}

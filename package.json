@@ -1,0 +1,47 @@
+{
+  "name": "botium-asserter-watson-toneanalyzer",
+  "version": "0.0.5",
+  "description": "",
+  "main": "dist/botium-asserter-watson-toneanalyzer-cjs.js",
+  "module": "dist/botium-asserter-watson-toneanalyzer-es.js",
+  "scripts": {
+    "build": "npm run eslint && rollup -c",
+    "eslint": "eslint \"./src/**/*.js\"",
+    "eslint:fix": "eslint --fix \"./src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeforequity-at/botium-asserter-watson-toneanalyzer.git"
+  },
+  "author": "Stefan Sevelda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codeforequity-at/botium-core/issues"
+  },
+  "homepage": "https://github.com/codeforequity-at/botium-core#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "rollup": "^1.23.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.2",
+    "debug": "^4.1.1",
+    "ibm-watson": "^5.1.0"
+  },
+  "peerDependencies": {
+    "botium-core": "^1.5.4"
+  }
+}
