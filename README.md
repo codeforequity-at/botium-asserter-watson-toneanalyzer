@@ -14,6 +14,9 @@ You have to activate the [Tone Analzer](https://www.ibm.com/watson/services/tone
 
 Configuration of the asserter is done with the args properties (see below).
 
+_You can provide and overwrite each of this asserter args with an environment variable starting with BOTIUM\_arg-name - for example, to provide the IBM Cloud API Key as environment variable instead of asserter arg, use the environment variable BOTIUM\_WATSONTA\_APIKEY_
+
+
 ### WATSONTA_URL
 _Default: https://gateway.watsonplatform.net/tone-analyzer/api_
 
@@ -55,9 +58,19 @@ Minimum likelihood to trigger a tone match.
 
 ### Botium Box
 
-Preconfigured in Botium Box with *TONEANALYZER* reference code. You have to add your Watson credentials.
-
-See https://botium.atlassian.net/wiki/spaces/BOTIUM/pages/2293815/Botium+Asserters
+Deploy the NPM package to Botium Box
+* Download this package [as ZIP file](https://github.com/codeforequity-at/botium-asserter-watson-toneanalyzer/archive/master.zip)
+* Follow [these](https://botium.atlassian.net/wiki/spaces/BOTIUM/pages/2293815/Botium+Asserters) instructions to register in Botium Box
+* Use the _Component Configuration_ field to add configuration args (see below):
+```
+{
+  "WATSONTA_URL": "...",
+  "WATSONTA_APIKEY": "..."
+}
+```
+* Suggestions:
+    * Use **TONEANALYZER** as _Component Ref Code_
+    * Use **Register as global scripting component** to make it a **global** asserter in all test cases
 
 ### Botium Core / Botium Bindings / Botium CLI
 
