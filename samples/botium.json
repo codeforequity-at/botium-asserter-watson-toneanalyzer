@@ -9,8 +9,8 @@
           "src": "botium-asserter-watson-toneanalyzer",
           "global": true,
           "args": {
-            "WATSON_URL": "...",
-            "WATSON_APIKEY": "..."
+            "WATSONTA_URL": "...",
+            "WATSONTA_APIKEY": "..."
           }          
         }
       ]
