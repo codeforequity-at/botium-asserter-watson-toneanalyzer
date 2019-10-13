@@ -1,4 +1,4 @@
-# Botium Asserter with Watson Tone Analyzer
+# Botium Tone Analyzer Asserter
 
 [![NPM](https://nodei.co/npm/botium-asserter-watson-toneanalyzer.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/botium-asserter-watson-toneanalyzer/)
 
