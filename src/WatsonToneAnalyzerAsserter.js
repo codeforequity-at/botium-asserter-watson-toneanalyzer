@@ -49,8 +49,9 @@ module.exports = class WatsonToneAnalyzerAsserter {
     }
     if (!analyzeText) return
 
-    let triggers = []
+    botMsg.sourceData = botMsg.sourceData || {}
 
+    let triggers = []
     if (this.globalArgs.WATSONTA_ENDPOINT === 'toneChat') {
       const toneChatParams = {
         utterances: [
@@ -61,6 +62,7 @@ module.exports = class WatsonToneAnalyzerAsserter {
         ]
       }
       const utteranceAnalysis = await this.toneAnalyzer.toneChat(toneChatParams)
+      botMsg.sourceData.toneAnalysis = utteranceAnalysis.result
       debug(`Analyzing toneChatParams: ${JSON.stringify(toneChatParams)} => ${JSON.stringify(utteranceAnalysis.result)}`)
       if (utteranceAnalysis.result && utteranceAnalysis.result.utterances_tone && utteranceAnalysis.result.utterances_tone.length > 0) {
         const toneResult = utteranceAnalysis.result.utterances_tone[0]
@@ -74,6 +76,7 @@ module.exports = class WatsonToneAnalyzerAsserter {
         contentType: 'text/plain'
       }
       const toneAnalysis = await this.toneAnalyzer.tone(toneParams)
+      botMsg.sourceData.toneAnalysis = toneAnalysis.result
       debug(`Analyzing toneParams: ${JSON.stringify(toneParams)} => ${JSON.stringify(toneAnalysis.result)}`)
       if (toneAnalysis.result && toneAnalysis.result.document_tone) {
         const toneResult = toneAnalysis.result.document_tone
